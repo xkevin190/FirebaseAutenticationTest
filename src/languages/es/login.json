@@ -1,0 +1,44 @@
+{
+    "translation": {
+      "header": "Ingresar",
+      "title": "¡Bienvenido!",
+      "forgotPasswordButton": "¿Olvidaste tu contraseña?",
+      "loginButton": {
+        "label": "Ingresar",
+        "loading": "Ingresando..."
+      },
+      "signUp": {
+        "prefix": "¿Aún no tienes una cuenta?",
+        "label": "Crear cuenta"
+      },
+      "emailInput": {
+        "label": "Email",
+        "placeholder": "Ingrese su email",
+        "validation": "Este email no es válido."
+      },
+      "passwordInput": {
+        "label": "Contraseña",
+        "placeholder": "Ingrese su contraseña",
+        "validations": {
+          "minimunChar": "Minimo de 8 caracteres",
+          "oneNumber": "Al menos un número",
+          "upperAndLower": "Mayúsculas y minúsculas"
+        } 
+      },
+      "emailValidationPrompt": {
+        "title": "Validar Email!",
+        "description": "Por favor chequee su correo antes de ingresar",
+        "buttonText": "Entendido!"
+      },
+      "accountBlockPrompt": {
+        "title": "Cuenta bloqueada",
+        "description":"Por favor contactar al equipo de soporte por mas información.",
+        "buttonText": "Entendido!"
+      },
+      "loginErrorPrompt": {
+        "title": "Credenciales incorrectas!",
+        "description":"Email o contraseña incorrectos. Por favor intenta nuevamente.",
+        "buttonText": "Entendido!"
+      }
+    }
+  }

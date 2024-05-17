@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomInput (Unit-Test) general functionality should match snapshot 1`] = `
+<Fragment>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "#9DA5B9",
+        "borderRadius": 16,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "marginBottom": 18,
+        "marginTop": 6,
+        "width": "100%",
+      }
+    }
+  >
+    <TextInput
+      autoCapitalize="none"
+      autoCorrect={false}
+      multiline={false}
+      numberOfLines={1}
+      onChangeText={[Function]}
+      placeholder="TEST_PLACEHOLDER"
+      placeholderTextColor="#9DA5B9"
+      secureTextEntry={false}
+      style={
+        Object {
+          "color": "#000000",
+          "flex": 1,
+          "fontFamily": "Lato-Regular",
+          "fontSize": 14,
+          "paddingHorizontal": 16,
+          "paddingVertical": 10,
+        }
+      }
+      textAlignVertical="auto"
+      value="TEST_INPUT"
+    />
+  </View>
+</Fragment>
+`;

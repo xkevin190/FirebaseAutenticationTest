@@ -1,0 +1,44 @@
+{
+  "translation": {
+    "header": "Login",
+    "title": "Welcome",
+    "forgotPasswordButton": "Forgot password?",
+    "loginButton": {
+      "label": "Login",
+      "loading": "Logging..."
+    },
+    "signUp": {
+      "prefix": "Don’t have an account?",
+      "label": "Sign up"
+    },
+    "emailInput": {
+      "label": "Email",
+      "placeholder": "Enter your email",
+      "validation": "This is an invalid email."
+    },
+    "passwordInput": {
+      "label": "Password",
+      "placeholder": "Enter your password",
+      "validations": {
+        "minimunChar": "Minimun 8 characters",
+        "oneNumber": "At least 1 number",
+        "upperAndLower": "Uppercase and lowercase"
+      } 
+    },
+    "emailValidationPrompt": {
+      "title": "Validate Email!",
+      "description":"Please verify your email before logging in.",
+      "buttonText": "Understood!"
+    },
+    "accountBlockPrompt": {
+      "title": "Account blocked",
+      "description":"Please contact support team for help.",
+      "buttonText": "Understood!"
+    },
+    "loginErrorPrompt": {
+      "title": "Wrong credentials",
+      "description":"Email or password are invalid. Please try again.",
+      "buttonText": "Understood!"
+    }
+  }
+}

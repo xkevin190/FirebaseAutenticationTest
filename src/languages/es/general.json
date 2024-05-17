@@ -1,0 +1,11 @@
+{
+    "translation": {
+      "requiredField": "This field is required.",
+      "backButton": "Back",
+      "apiErrorPrompt": {
+        "title": "Something went wrong!",
+        "description":"There was a problem with the service requested. Please try again later.",
+        "buttonText": "Understood!"
+      }
+    }
+  }
