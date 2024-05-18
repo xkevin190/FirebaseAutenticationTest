@@ -13,13 +13,32 @@ import {Button, CustomText, CustomInput, HyperText} from '../../shared';
 import {useNavigationRootStack} from '../../types/navigation';
 import styles from './Login.styles';
 import {COLORS} from '../../constants/styles';
+import Controller from '../../shared/Controller';
+import {useLoginForm} from './hooks/useLoginForm';
+import {SignInRequest} from '../../types/FirebaseService';
+import {signInThunk} from '../../store/Auth/slice';
+import useAppDispatch from '../../hooks/useAppDispatch';
+import {authLoading, getUserInfo} from '../../store/Auth/selectors';
+import useAppSelector from '../../hooks/useAppSelector';
+
+const ControlledInputs = Controller(CustomInput);
 
 const Login: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [isPasswordHidden, setIsPasswordHidden] = useState(true);
+  const [isPasswordHidden] = useState(true);
   const navigation = useNavigation<useNavigationRootStack>();
+  const dispatch = useAppDispatch();
+
+  const loading = useAppSelector(authLoading);
   const {t} = useTranslation();
+
+  const {control, watch, handleSubmit} = useLoginForm({
+    email: '',
+    password: '',
+  });
+
+  const signIn = (data: SignInRequest) => {
+    dispatch(signInThunk(data));
+  };
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -32,18 +51,19 @@ const Login: React.FC = () => {
           customStyle={styles.subtitleContainer}
         />
         <KeyboardAvoidingView style={styles.inputsContainer} behavior="padding">
-          <CustomInput
-            value={email}
+          <ControlledInputs
+            name="email"
+            control={control}
+            value={watch('email')}
             title={t('login:translation.emailInput.label')}
             placeholder={t('login:translation.emailInput.placeholder')}
-            onChangeText={setEmail}
-            validationsText={[t('login:translation.emailInput.validation')]}
           />
-          <CustomInput
-            value={password}
+          <ControlledInputs
+            name="password"
+            control={control}
+            value={watch('password')}
             title={t('login:translation.passwordInput.label')}
             placeholder={t('login:translation.passwordInput.placeholder')}
-            onChangeText={setPassword}
             password={isPasswordHidden}
           />
         </KeyboardAvoidingView>
@@ -55,12 +75,12 @@ const Login: React.FC = () => {
         />
         <Button
           buttonText={t(
-            `login:translation.loginButton.${false ? 'loading' : 'label'}`,
+            `login:translation.loginButton.${loading ? 'loading' : 'label'}`,
           )}
           textColor={COLORS.WHITE}
           rounded
-          disabled={true}
-          onPress={() => console.log('executed!!1')}
+          disabled={loading}
+          onPress={handleSubmit(signIn)}
           testID={''}
         />
         <HyperText

@@ -8,7 +8,7 @@ import {COLORS} from '../../constants/styles';
 
 export interface IButtonProps {
   buttonText: string;
-  testID: string;
+  testID?: string;
   size?: ButtonSize;
   rounded?: boolean;
   color?: string;

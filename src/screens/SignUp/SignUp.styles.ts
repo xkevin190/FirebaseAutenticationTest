@@ -13,10 +13,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     marginBottom: 8,
   } as ViewStyle,
-  opyaLogo: {
-    width: '50%',
-    height: '20%',
-  } as ImageStyle,
+
   signInButton: {
     marginTop: 32,
   } as ViewStyle,

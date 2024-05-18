@@ -32,10 +32,10 @@
         "label": "Sign in"
       },
       "completion": {
-        "title": "Please verify your email address",
-        "description": "In order to start using this app and for security reasons you need to verify your email.",
+        "title": "Account Successfully Registered!",
+        "description": "Congratulations! Your account has been successfully created. You can now enjoy all the features and benefits our platform has to offer.",
         "loginButton": {
-          "prefix": "Already verified the account?",
+          "prefix": "Please go to the",
           "label": "Login"
         }
       },

@@ -32,10 +32,10 @@
         "label": "Ingresar"
       },
       "completion": {
-        "title": "Por favor chequee su correo",
-        "description": "Para empezar a usar esta app y por razones de seguridad necesita chequear su cuenta.",
+        "title": " ¡Cuenta Registrada con Éxito!",
+        "description": "Felicidades! Su cuenta ha sido creada satisfactoriamente. Ahora puedes disfrutar de todas las características y beneficios que nuestra plataforma tiene para ofrecer.",
         "loginButton": {
-          "prefix": "¿Ya verificaste la cuenta?",
+          "prefix": "Para continuar por favor vaya a",
           "label": "Ingresar"
         }
       },

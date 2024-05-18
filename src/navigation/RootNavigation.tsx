@@ -14,11 +14,14 @@ import {SIGN_UP, FORGOT_PASSWORD, LOGIN, HOME_STACK} from './routes';
 
 import {SCREEN_ANIMATION} from '../constants/general';
 import {COLORS} from '../constants/styles';
+import useAppSelector from '../hooks/useAppSelector';
+import {getUserInfo} from '../store/Auth/selectors';
+import {useVerifySession} from '../hooks/useVerifySession';
 
 const Stack = createNativeStackNavigator<RootParamList>();
 
 const RootStack: React.FC = () => {
-  const userToken = false;
+  const userInfo = useAppSelector(getUserInfo);
 
   const onboardingHeaderStyles: NativeStackNavigationOptions = {
     headerShadowVisible: false,
@@ -29,19 +32,22 @@ const RootStack: React.FC = () => {
     headerTintColor: COLORS.MAIN_DEFAULT,
   };
 
+  useVerifySession();
+
   return (
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
           animation: SCREEN_ANIMATION,
           headerBackTitle: '',
+          headerShown: userInfo ? false : true,
         }}>
-        {!!userToken && (
+        {!!userInfo && (
           <>
             <Stack.Screen name={HOME_STACK} component={HomeStack} />
           </>
         )}
-        {!userToken && (
+        {!userInfo && (
           <>
             <Stack.Screen
               name={LOGIN}

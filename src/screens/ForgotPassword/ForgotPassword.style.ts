@@ -1,4 +1,4 @@
-import {StyleSheet, ViewStyle, ImageStyle, TextStyle} from 'react-native';
+import {StyleSheet, ViewStyle} from 'react-native';
 
 import {COLORS} from '../../constants/styles';
 
@@ -9,22 +9,15 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     backgroundColor: COLORS.GRAY_LIGHT,
   } as ViewStyle,
-
   inputsContainer: {
     width: '100%',
     paddingHorizontal: 24,
     marginBottom: 8,
+    marginTop: 40,
   } as ViewStyle,
-  subtitleContainer: {
-    marginBottom: 40,
-  } as TextStyle,
-  signUpButton: {
-    marginTop: 32,
-  } as ViewStyle,
-  forgotPasswordContainer: {
-    alignSelf: 'flex-start',
-    paddingHorizontal: 40,
-    marginBottom: 30,
+  sendEmailButtonContainer: {
+    width: '100%',
+    paddingHorizontal: 24,
   } as ViewStyle,
 });
 

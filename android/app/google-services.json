@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "744613941729",
+    "project_id": "fir-authtest-c2170",
+    "storage_bucket": "fir-authtest-c2170.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744613941729:android:d15834de92d099714c02a0",
+        "android_client_info": {
+          "package_name": "com.kevin.TestProject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9shfAwAO8QFsmCo21nrNraejI2DkC_YA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

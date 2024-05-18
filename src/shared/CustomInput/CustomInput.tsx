@@ -1,70 +1,60 @@
-import React, {useState} from 'react';
-import {TextInput, View} from 'react-native';
-import {useTranslation} from 'react-i18next';
+import React from 'react';
+import {StyleProp, TextInput, View, ViewStyle} from 'react-native';
 
 import CustomText from '../CustomText';
 import {COLORS} from '../../constants/styles';
 import styles from './CustomInput.styles';
 
-export interface ICustomInputProps {
+export interface FormInputProps {
+  iconPosition?: 'start' | 'end';
+  containerStyle?: StyleProp<ViewStyle>;
+  inputStyle?: ViewStyle;
+  onPress?: () => void;
   title?: string;
-  validationsText?: string[];
   placeholder: string;
   value: string;
   height?: number;
   textArea?: boolean;
-  pattern?: RegExp[];
   required?: boolean;
   password?: boolean;
   icon?: React.ReactNode;
-  onChangeText: (text: string) => void;
+  error?: boolean;
+  disabled?: boolean;
+  helperText?: string;
+  onFocus?: (e: any) => void;
+  onBlur?: (e: any) => void;
+  onchangeText?: (text: string) => void;
 }
 
-const CustomInput: React.FC<ICustomInputProps> = ({
+const CustomInput: React.FC<FormInputProps> = ({
   title = '',
   placeholder,
   value,
-  validationsText = [],
   height,
   textArea = false,
-  pattern,
   required = false,
   password = false,
+  onFocus,
+  onBlur,
   icon = null,
-  onChangeText,
+  helperText,
+  onchangeText,
+  error,
+  ...rest
 }) => {
-  const {t} = useTranslation();
-  const [hasError, setHasError] = useState(false);
-  const isRequiredEnabled = required && !value;
-  const isValidationEnabled = hasError && !!value;
-  const isErrorEnabled = isRequiredEnabled || isValidationEnabled;
-  const handleValidation = (valueToValidate: string): boolean => {
-    if (!pattern || !validationsText.length) {
-      return false;
-    }
-    const conditions = pattern.map(rule => new RegExp(rule, 'g'));
-    return !conditions.every(condition => condition.test(valueToValidate));
-  };
-  const handleOnChange = (newValue: string) => {
-    setHasError(handleValidation(newValue));
-    onChangeText(newValue);
-  };
-
   return (
     <>
       {title ? (
         <CustomText
           text={title.toUpperCase()}
-          color={isErrorEnabled ? COLORS.ALERT_DEFAULT : COLORS.GRAY_MEDIUM}
+          color={error ? COLORS.ALERT_DEFAULT : COLORS.GRAY_MEDIUM}
           bodyType="small-paragraph-bold"
         />
       ) : null}
       <View
         style={{
           ...styles.inputContainer,
-          borderColor: isErrorEnabled
-            ? COLORS.ALERT_DEFAULT
-            : COLORS.GRAY_MEDIUM,
+          borderColor: error ? COLORS.ALERT_DEFAULT : COLORS.GRAY_MEDIUM,
           ...(!!height && {height}),
         }}>
         <TextInput
@@ -72,43 +62,38 @@ const CustomInput: React.FC<ICustomInputProps> = ({
           style={{
             ...styles.input,
             ...(!!height && {height}),
-            color: isErrorEnabled ? COLORS.ALERT_DEFAULT : COLORS.BLACK,
+            color: error ? COLORS.ALERT_DEFAULT : COLORS.BLACK,
           }}
           placeholderTextColor={
-            isErrorEnabled ? COLORS.ALERT_DEFAULT : COLORS.GRAY_MEDIUM
+            error ? COLORS.ALERT_DEFAULT : COLORS.GRAY_MEDIUM
           }
+          onFocus={e => {
+            onFocus?.(e);
+          }}
+          onBlur={e => {
+            onBlur?.(e);
+          }}
           autoCorrect={false}
           value={value}
-          onChangeText={handleOnChange}
           multiline={textArea}
           numberOfLines={textArea ? 10 : 1}
           textAlignVertical={textArea ? 'top' : 'auto'}
           secureTextEntry={password}
           autoCapitalize="none"
+          onChangeText={onchangeText}
+          {...rest}
         />
         {icon && <View style={styles.iconContainer}>{icon}</View>}
       </View>
-      {isRequiredEnabled || isValidationEnabled ? (
+      {helperText && (
         <View style={styles.errorContainer}>
-          {isRequiredEnabled ? (
-            <CustomText
-              text={`- ${t('general:translation.requiredField')}`}
-              color={COLORS.ALERT_DEFAULT}
-              bodyType="small-paragraph"
-            />
-          ) : null}
-          {isValidationEnabled
-            ? validationsText.map(validation => (
-                <CustomText
-                  key={validation}
-                  text={`- ${validation}`}
-                  color={COLORS.ALERT_DEFAULT}
-                  bodyType="small-paragraph"
-                />
-              ))
-            : null}
+          <CustomText
+            text={helperText}
+            color={COLORS.ALERT_DEFAULT}
+            bodyType="small-paragraph"
+          />
         </View>
-      ) : null}
+      )}
     </>
   );
 };
