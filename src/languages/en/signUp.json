@@ -1,0 +1,48 @@
+{
+    "translation": {
+      "header": "Sign Up",
+      "createAccountButton": {
+        "label": "Create account",
+        "loading": "Creating..."
+      },
+      "nameInput": {
+        "label": "Your name",
+        "placeholder": "Enter your name" 
+      },
+      "lastNameInput": {
+        "label": "Your last name",
+        "placeholder": "Enter your last name" 
+      },
+      "emailInput": {
+        "label": "Your email",
+        "placeholder": "Enter your email",
+        "validation": "This is an invalid email."
+      },
+      "passwordInput": {
+        "label": "Password",
+        "placeholder": "Enter your password",
+        "validations": {
+          "minimunChar": "Minimun 8 characters",
+          "oneNumber": "At least 1 number",
+          "upperAndLower": "Uppercase and lowercase"
+        } 
+      },
+      "signIn": {
+        "prefix": "Have an account?",
+        "label": "Sign in"
+      },
+      "completion": {
+        "title": "Please verify your email address",
+        "description": "In order to start using this app and for security reasons you need to verify your email.",
+        "loginButton": {
+          "prefix": "Already verified the account?",
+          "label": "Login"
+        }
+      },
+      "signUpErrorPrompt": {
+        "title": "User already exists!",
+        "description":"Email already is register. Please try again with another email.",
+        "buttonText": "Understood!"
+      }
+    }
+  }

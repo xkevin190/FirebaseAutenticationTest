@@ -1,0 +1,48 @@
+{
+    "translation": {
+      "header": "Registrarse",
+      "createAccountButton": {
+        "label": "Crear cuenta",
+        "loading": "Creando..."
+      },
+      "nameInput": {
+        "label": "Nombre",
+        "placeholder": "Ingrese su nombre" 
+      },
+      "lastNameInput": {
+        "label": "Apellido",
+        "placeholder": "Ingrese su apellido" 
+      },
+      "emailInput": {
+        "label": "Email",
+        "placeholder": "Ingrese su email",
+        "validation": "Este email no es válido."
+      },
+      "passwordInput": {
+        "label": "Contraseña",
+        "placeholder": "Ingrese su contraseña",
+        "validations": {
+          "minimunChar": "Minimo de 8 caracteres",
+          "oneNumber": "Al menos un número",
+          "upperAndLower": "Mayúsculas y minúsculas"
+        } 
+      },
+      "signIn": {
+        "prefix": "¿Ya tienes una cuenta?",
+        "label": "Ingresar"
+      },
+      "completion": {
+        "title": "Por favor chequee su correo",
+        "description": "Para empezar a usar esta app y por razones de seguridad necesita chequear su cuenta.",
+        "loginButton": {
+          "prefix": "¿Ya verificaste la cuenta?",
+          "label": "Ingresar"
+        }
+      },
+      "signUpErrorPrompt": {
+        "title": "El usuario ya existe!",
+        "description":"El email ya se encuentra registrado. Por favor intenta nuevamente con otro email.",
+        "buttonText": "Entendido!"
+      }
+    }
+  }

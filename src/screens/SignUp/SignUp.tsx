@@ -1,18 +1,141 @@
-import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import React, { useState, useCallback } from 'react';
+import {
+  View,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  TouchableWithoutFeedback,
+  Keyboard,
+} from 'react-native';
+import { useTranslation } from 'react-i18next';
+import { useNavigation, useFocusEffect } from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-interface SignUpProps {}
+import type { useNavigationRootStack } from '../../types/navigation';
+// import {
+//   emailRegex,
+//   minimunChar8,
+//   oneDigit,
+//   upperAndLower,
+// } from '../../utils/regex';
+import { LOGIN } from '../../navigation/routes';
 
-const SignUp = (props: SignUpProps) => {
-  return (
-    <View style={styles.container}>
-      <Text>SignUp</Text>
-    </View>
+import { CustomInput, Button, HyperText } from '../../shared';
+import { ICONS } from '../../constants/assets';
+import { COLORS } from '../../constants/styles';
+// import { postCreateAccount, authActions } from '../../store/auth/slice';
+// import { useAppDispatch, useAppSelector } from '../../hooks';
+
+import CreateAccountCompleted from './components/CreateAccountCompleted';
+
+import styles from './SignUp.styles';
+
+const SignUp: React.FC = () => {
+  // const dispatch = useAppDispatch();
+  // const { response, successful } = useAppSelector(getCreateAccountResponse);
+  // const loading = useAppSelector(getCreateAccountLoading);
+  const [name, setName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isPasswordHidden, setIsPasswordHidden] = useState(true);
+  const { t } = useTranslation();
+  const navigation = useNavigation<useNavigationRootStack>();
+  const successful = false;
+  const loading  = false;
+
+  // userExistsPrompt();
+  // useFocusEffect(
+  //   useCallback(() => {
+  //     dispatch(authActions.resetCreateAccount());
+  //   }, []),
+  // );
+
+  return !successful ? (
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+      <View style={styles.container}>
+        <KeyboardAvoidingView style={styles.inputsContainer} behavior="padding">
+          <CustomInput
+            value={name}
+            title={t('signUp:translation.nameInput.label')}
+            placeholder={t('signUp:translation.nameInput.placeholder')}
+            onChangeText={setName}
+            // required={!!response?.fields?.['body.firstname']?.message}
+          />
+          <CustomInput
+            value={lastName}
+            title={t('signUp:translation.lastNameInput.label')}
+            placeholder={t('signUp:translation.lastNameInput.placeholder')}
+            onChangeText={setLastName}
+            // required={!!response?.fields?.['body.lastname']?.message}
+          />
+          <CustomInput
+            value={email}
+            title={t('signUp:translation.emailInput.label')}
+            placeholder={t('signUp:translation.emailInput.placeholder')}
+            onChangeText={setEmail}
+            // pattern={[emailRegex]}
+            validationsText={[t('signUp:translation.emailInput.validation')]}
+            // required={!!response?.fields?.['body.email']?.message}
+          />
+          <CustomInput
+            value={password}
+            title={t('signUp:translation.passwordInput.label')}
+            placeholder={t('signUp:translation.passwordInput.placeholder')}
+            onChangeText={setPassword}
+            validationsText={[
+              t('signUp:translation.passwordInput.validations.minimunChar'),
+              t('signUp:translation.passwordInput.validations.oneNumber'),
+              t('signUp:translation.passwordInput.validations.upperAndLower'),
+            ]}
+            // required={!!response?.fields?.['body.password']?.message}
+            // pattern={[oneDigit, upperAndLower, minimunChar8]}
+            password={isPasswordHidden}
+            icon={
+              <TouchableOpacity
+                onPress={() => setIsPasswordHidden(!isPasswordHidden)}
+              >
+                <Icon
+                  name={isPasswordHidden ? "eye" : "eye-off"}
+                  size={15}
+                  color={COLORS.MAIN_DEFAULT}
+                />
+              </TouchableOpacity>
+            }
+          />
+        </KeyboardAvoidingView>
+        <Button
+          buttonText={t(
+            `signUp:translation.createAccountButton.${
+              loading ? 'loading' : 'label'
+            }`,
+          )}
+          textColor={COLORS.WHITE}
+          rounded
+          testID='createAccountButton'
+          disabled={loading}
+          onPress={() =>  console.log('Create Account')
+            // dispatch(
+            //   postCreateAccount({
+            //     email,
+            //     firstname: name,
+            //     lastname: lastName,
+            //     password,
+            //   }),
+            // )
+          }
+        />
+        <HyperText
+          prefix={t('signUp:translation.signIn.prefix')}
+          text={t('signUp:translation.signIn.label')}
+          customStyles={styles.signInButton}
+          onPress={() => navigation.navigate(LOGIN)}
+          testID={'signInButton'}
+        />
+      </View>
+    </TouchableWithoutFeedback>
+  ) : (
+    <CreateAccountCompleted />
   );
 };
 
 export default SignUp;
-
-const styles = StyleSheet.create({
-  container: {}
-});
