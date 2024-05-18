@@ -1,10 +1,10 @@
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 import Icon from 'react-native-vector-icons/Fontisto';
 
 import CustomText from '../../../CustomText';
-import { ICONS } from '../../../../constants/assets';
-import { COLORS } from '../../../../constants/styles';
+import {ICONS} from '../../../../constants/assets';
+import {COLORS} from '../../../../constants/styles';
 import styles from './CustomModalHeader.styles';
 
 export interface ICustomModalHeaderProps {

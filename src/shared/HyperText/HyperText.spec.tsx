@@ -1,10 +1,10 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { TouchableOpacityProps } from 'react-native';
+import {shallow} from 'enzyme';
+import {TouchableOpacityProps} from 'react-native';
 
-import { COLORS } from '../../constants/styles';
-import { ICustomTextProps } from '../CustomText/CustomText';
-import HyperText, { IHyperTextProps } from './HyperText';
+import {COLORS} from '../../constants/styles';
+import {ICustomTextProps} from '../CustomText/CustomText';
+import HyperText, {IHyperTextProps} from './HyperText';
 
 describe('HyperText (Unit-Test)', () => {
   const props: IHyperTextProps = {

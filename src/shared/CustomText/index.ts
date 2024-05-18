@@ -1,1 +1,1 @@
-export { default } from './CustomText';
+export {default} from './CustomText';

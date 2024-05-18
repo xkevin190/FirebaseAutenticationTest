@@ -1,6 +1,6 @@
-import { StyleSheet, ViewStyle } from 'react-native';
+import {StyleSheet, ViewStyle} from 'react-native';
 
-import { COLORS } from '../../constants/styles';
+import {COLORS} from '../../constants/styles';
 
 const styles = StyleSheet.create({
   modalBackgroundContainer: {

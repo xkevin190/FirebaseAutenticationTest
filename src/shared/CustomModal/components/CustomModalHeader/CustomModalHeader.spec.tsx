@@ -1,13 +1,11 @@
 import React from 'react';
-import { shallow, ShallowWrapper } from 'enzyme';
-import { FontAwesome5IconProps } from 'react-native-vector-icons/FontAwesome5';
+import {shallow, ShallowWrapper} from 'enzyme';
+import {FontAwesome5IconProps} from 'react-native-vector-icons/FontAwesome5';
 
-import { ICustomTextProps } from '../../../CustomText/CustomText';
-import { COLORS } from '../../../../constants/styles';
-import { ICONS } from '../../../../constants/assets';
-import CustomModalHeader, {
-  ICustomModalHeaderProps,
-} from './CustomModalHeader';
+import {ICustomTextProps} from '../../../CustomText/CustomText';
+import {COLORS} from '../../../../constants/styles';
+import {ICONS} from '../../../../constants/assets';
+import CustomModalHeader, {ICustomModalHeaderProps} from './CustomModalHeader';
 
 describe('CustomModalHeader (Unit-Test)', () => {
   let wrapper: ShallowWrapper;

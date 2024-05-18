@@ -1,6 +1,6 @@
-import { StyleSheet, TextStyle, ViewStyle } from 'react-native';
+import {StyleSheet, TextStyle, ViewStyle} from 'react-native';
 
-import { COLORS, STYLES } from '../../constants/styles';
+import {COLORS, STYLES} from '../../constants/styles';
 
 const styles = StyleSheet.create({
   inputContainer: {

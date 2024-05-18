@@ -1,6 +1,6 @@
-import { StyleSheet, TextStyle } from 'react-native';
+import {StyleSheet, TextStyle} from 'react-native';
 
-import { STYLES } from '../../constants/styles';
+import {STYLES} from '../../constants/styles';
 
 const styles = StyleSheet.create({
   'small-paragraph-bold': {

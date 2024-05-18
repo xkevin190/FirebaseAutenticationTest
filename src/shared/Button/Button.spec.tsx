@@ -1,11 +1,11 @@
 import React from 'react';
-import { TouchableOpacityProps } from 'react-native';
-import { shallow, ShallowWrapper } from 'enzyme';
+import {TouchableOpacityProps} from 'react-native';
+import {shallow, ShallowWrapper} from 'enzyme';
 
 import styles from './Button.styles';
-import { ICustomTextProps } from '../CustomText/CustomText';
-import { COLORS } from '../../constants/styles';
-import Button, { IButtonProps } from './Button';
+import {ICustomTextProps} from '../CustomText/CustomText';
+import {COLORS} from '../../constants/styles';
+import Button, {IButtonProps} from './Button';
 
 describe('Button (Unit-Test)', () => {
   const props: IButtonProps = {

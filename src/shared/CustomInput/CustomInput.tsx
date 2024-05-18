@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { TextInput, View } from 'react-native';
-import { useTranslation } from 'react-i18next';
+import React, {useState} from 'react';
+import {TextInput, View} from 'react-native';
+import {useTranslation} from 'react-i18next';
 
 import CustomText from '../CustomText';
-import { COLORS } from '../../constants/styles';
+import {COLORS} from '../../constants/styles';
 import styles from './CustomInput.styles';
 
 export interface ICustomInputProps {
@@ -33,7 +33,7 @@ const CustomInput: React.FC<ICustomInputProps> = ({
   icon = null,
   onChangeText,
 }) => {
-  const { t } = useTranslation();
+  const {t} = useTranslation();
   const [hasError, setHasError] = useState(false);
   const isRequiredEnabled = required && !value;
   const isValidationEnabled = hasError && !!value;
@@ -65,14 +65,13 @@ const CustomInput: React.FC<ICustomInputProps> = ({
           borderColor: isErrorEnabled
             ? COLORS.ALERT_DEFAULT
             : COLORS.GRAY_MEDIUM,
-          ...(!!height && { height }),
-        }}
-      >
+          ...(!!height && {height}),
+        }}>
         <TextInput
           placeholder={placeholder}
           style={{
             ...styles.input,
-            ...(!!height && { height }),
+            ...(!!height && {height}),
             color: isErrorEnabled ? COLORS.ALERT_DEFAULT : COLORS.BLACK,
           }}
           placeholderTextColor={

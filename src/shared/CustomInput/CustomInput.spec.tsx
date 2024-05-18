@@ -7,12 +7,12 @@ import {
   Text,
   TextProps,
 } from 'react-native';
-import { shallow, ShallowWrapper } from 'enzyme';
+import {shallow, ShallowWrapper} from 'enzyme';
 
-import { ICustomTextProps } from '../CustomText/CustomText';
-import { COLORS } from '../../constants/styles';
-import { emailRegex } from '../../utils/regex';
-import CustomInput, { ICustomInputProps } from './CustomInput';
+import {ICustomTextProps} from '../CustomText/CustomText';
+import {COLORS} from '../../constants/styles';
+import {emailRegex} from '../../utils/regex';
+import CustomInput, {ICustomInputProps} from './CustomInput';
 
 describe('CustomInput (Unit-Test)', () => {
   const props: ICustomInputProps = {

@@ -1,10 +1,10 @@
 import React from 'react';
-import { TextProps, TextStyle } from 'react-native';
-import { shallow, ShallowWrapper } from 'enzyme';
+import {TextProps, TextStyle} from 'react-native';
+import {shallow, ShallowWrapper} from 'enzyme';
 
 import styles from './CustomText.style';
-import { COLORS } from '../../constants/styles';
-import CustomText, { ICustomTextProps } from './CustomText';
+import {COLORS} from '../../constants/styles';
+import CustomText, {ICustomTextProps} from './CustomText';
 
 describe('CustomText (Unit-Test)', () => {
   const props: ICustomTextProps = {

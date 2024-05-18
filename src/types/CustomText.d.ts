@@ -7,4 +7,3 @@ export type TextBody =
   | 'paragraph-bold'
   | 'small-paragraph-bold'
   | 'large-paragraph';
-

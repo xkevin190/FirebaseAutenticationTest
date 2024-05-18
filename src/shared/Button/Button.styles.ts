@@ -1,4 +1,4 @@
-import { StyleSheet, ViewStyle } from 'react-native';
+import {StyleSheet, ViewStyle} from 'react-native';
 
 const basicContainer: ViewStyle = {
   justifyContent: 'center',

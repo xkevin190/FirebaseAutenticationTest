@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, KeyboardAvoidingView, View } from 'react-native';
+import {Modal, KeyboardAvoidingView, View} from 'react-native';
 
 import CustomModalHeader from './components/CustomModalHeader';
 import styles from './CustomModal.styles';
@@ -22,12 +22,10 @@ const CustomModal: React.FC<ICustomModalProps> = ({
     transparent
     statusBarTranslucent
     animationType="fade"
-    onRequestClose={onRequestClose}
-  >
+    onRequestClose={onRequestClose}>
     <KeyboardAvoidingView
       behavior="padding"
-      style={styles.modalBackgroundContainer}
-    >
+      style={styles.modalBackgroundContainer}>
       <View style={styles.modalContainer}>
         <CustomModalHeader title={title} closeModal={onRequestClose} />
         {children}

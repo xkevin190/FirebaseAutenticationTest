@@ -1,9 +1,9 @@
 import React from 'react';
-import { ModalProps } from 'react-native';
-import { shallow, ShallowWrapper } from 'enzyme';
+import {ModalProps} from 'react-native';
+import {shallow, ShallowWrapper} from 'enzyme';
 
-import { ICustomModalHeaderProps } from './components/CustomModalHeader/CustomModalHeader';
-import CustomModal, { ICustomModalProps } from './CustomModal';
+import {ICustomModalHeaderProps} from './components/CustomModalHeader/CustomModalHeader';
+import CustomModal, {ICustomModalProps} from './CustomModal';
 
 describe('CustomModal (Unit-Test)', () => {
   let wrapper: ShallowWrapper;

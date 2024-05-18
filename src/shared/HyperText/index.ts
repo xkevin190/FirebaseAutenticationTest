@@ -1,1 +1,1 @@
-export { default } from './HyperText';
+export {default} from './HyperText';

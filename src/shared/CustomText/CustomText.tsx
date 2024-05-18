@@ -1,8 +1,8 @@
 import React from 'react';
-import { Text, TextStyle } from 'react-native';
+import {Text, TextStyle} from 'react-native';
 
-import { COLORS } from '../../constants/styles';
-import { TextBody } from '../../types/CustomText';
+import {COLORS} from '../../constants/styles';
+import {TextBody} from '../../types/CustomText';
 import styles from './CustomText.style';
 
 export interface ICustomTextProps {
@@ -26,11 +26,10 @@ const CustomText: React.FC<ICustomTextProps> = ({
     style={{
       ...styles[bodyType],
       ...customStyle,
-      ...(center && { textAlign: 'center' }),
+      ...(center && {textAlign: 'center'}),
       color,
     }}
-    testID={testID}
-  >
+    testID={testID}>
     {text}
   </Text>
 );

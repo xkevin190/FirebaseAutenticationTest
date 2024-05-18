@@ -1,7 +1,7 @@
 import React from 'react';
-import { TouchableOpacity, Text, ViewStyle } from 'react-native';
+import {TouchableOpacity, Text, ViewStyle} from 'react-native';
 
-import { COLORS } from '../../constants/styles';
+import {COLORS} from '../../constants/styles';
 import CustomText from '../CustomText';
 
 export interface IHyperTextProps {
