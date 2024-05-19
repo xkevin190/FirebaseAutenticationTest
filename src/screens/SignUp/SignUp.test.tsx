@@ -19,7 +19,6 @@ jest.mock('../../hooks/useAppSelector', () => jest.fn());
 jest.mock('../../store/Auth/selectors', () => jest.fn());
 
 jest.mock('react-i18next', () => ({
-  // this mock makes sure any components using the translate hook can use it without a warning being shown
   useTranslation: () => {
     return {
       t: (str: string) => str,
@@ -80,7 +79,7 @@ describe('SignUp component',  () => {
     expect(passwordInput).toBeTruthy();
   });
 
-  test('should writte in all input fields', async () => {
+  test('submits the form with valid values', async () => {
     const {getByPlaceholderText, getByTestId} = Component;
     const firstNameInput = getByPlaceholderText(
       'signUp:translation.nameInput.placeholder',
@@ -116,7 +115,7 @@ describe('SignUp component',  () => {
     
   });
 
-  test('should show error in all inputs', async () => {
+  test('displays error message for empty email field', async () => {
     const {getByPlaceholderText, debug, getByTestId, queryAllByTestId, update} =
       Component;
     const firstNameInput = getByPlaceholderText(

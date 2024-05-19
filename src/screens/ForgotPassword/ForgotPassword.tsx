@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useEffect} from 'react';
+import React, { useCallback } from 'react';
 import {
   View,
   TouchableWithoutFeedback,
@@ -27,7 +27,7 @@ const ForgotPassword: React.FC = () => {
   const {t} = useTranslation();
 
   useFocusEffect(
-    React.useCallback(() => {
+    useCallback(() => {
       return () => {
         dispatch(authActions.resetPasswordSent());
       };
@@ -65,6 +65,7 @@ const ForgotPassword: React.FC = () => {
             )}
             textColor={COLORS.WHITE}
             rounded
+            testID='resetPasswordButton'
             size="xxl"
             onPress={handleSubmit(onSubmit)}
             disabled={loading}

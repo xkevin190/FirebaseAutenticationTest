@@ -1,0 +1,621 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login component renders all input fields 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#F6F8FF",
+      "flex": 1,
+      "flexDirection": "column",
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#2162E3",
+        "fontFamily": "Lato-Regular",
+        "fontSize": 20,
+        "marginBottom": 40,
+        "textAlign": "center",
+      }
+    }
+    testID=""
+  >
+    login:translation.title
+  </Text>
+  <View
+    onLayout={[Function]}
+    style={
+      [
+        {
+          "marginBottom": 8,
+          "paddingHorizontal": 24,
+          "width": "100%",
+        },
+        {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#9DA5B9",
+          "fontFamily": "Lato-Bold",
+          "fontSize": 12,
+        }
+      }
+      testID=""
+    >
+      LOGIN:TRANSLATION.EMAILINPUT.LABEL
+    </Text>
+    <View
+      style={
+        {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#9DA5B9",
+          "borderRadius": 16,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "marginBottom": 18,
+          "marginTop": 6,
+          "width": "100%",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="none"
+        autoCorrect={false}
+        control={
+          {
+            "_defaultValues": {
+              "email": "",
+              "password": "",
+            },
+            "_disableForm": [Function],
+            "_executeSchema": [Function],
+            "_fields": {
+              "email": {
+                "_f": {
+                  "mount": true,
+                  "name": "email",
+                  "ref": {
+                    "name": "email",
+                  },
+                  "value": "",
+                },
+              },
+              "password": {
+                "_f": {
+                  "mount": true,
+                  "name": "password",
+                  "ref": {
+                    "name": "password",
+                  },
+                  "value": "",
+                },
+              },
+            },
+            "_formState": {
+              "dirtyFields": {},
+              "disabled": false,
+              "errors": {},
+              "isDirty": false,
+              "isLoading": false,
+              "isSubmitSuccessful": false,
+              "isSubmitted": false,
+              "isSubmitting": false,
+              "isValid": false,
+              "isValidating": false,
+              "submitCount": 0,
+              "touchedFields": {},
+              "validatingFields": {},
+            },
+            "_formValues": {
+              "email": "",
+              "password": "",
+            },
+            "_getDirty": [Function],
+            "_getFieldArray": [Function],
+            "_getWatch": [Function],
+            "_names": {
+              "array": Set {},
+              "mount": Set {
+                "email",
+                "password",
+              },
+              "unMount": Set {},
+              "watch": Set {
+                "email",
+                "password",
+              },
+            },
+            "_options": {
+              "defaultValues": {
+                "email": "",
+                "password": "",
+              },
+              "delayError": 100,
+              "mode": "onBlur",
+              "reValidateMode": "onChange",
+              "resolver": [Function],
+              "shouldFocusError": true,
+            },
+            "_proxyFormState": {
+              "dirtyFields": false,
+              "disabled": true,
+              "errors": true,
+              "isDirty": false,
+              "isValid": false,
+              "isValidating": false,
+              "touchedFields": false,
+              "validatingFields": false,
+            },
+            "_removeUnmounted": [Function],
+            "_reset": [Function],
+            "_resetDefaultValues": [Function],
+            "_setErrors": [Function],
+            "_state": {
+              "action": false,
+              "mount": true,
+              "watch": false,
+            },
+            "_subjects": {
+              "array": {
+                "next": [Function],
+                "observers": [],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+              "state": {
+                "next": [Function],
+                "observers": [
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                ],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+              "values": {
+                "next": [Function],
+                "observers": [
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                ],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+            },
+            "_updateDisabledField": [Function],
+            "_updateFieldArray": [Function],
+            "_updateFormState": [Function],
+            "_updateValid": [Function],
+            "getFieldState": [Function],
+            "handleSubmit": [Function],
+            "register": [Function],
+            "setError": [Function],
+            "unregister": [Function],
+          }
+        }
+        multiline={false}
+        name="email"
+        numberOfLines={1}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholder="login:translation.emailInput.placeholder"
+        placeholderTextColor="#9DA5B9"
+        secureTextEntry={false}
+        style={
+          {
+            "color": "#000000",
+            "flex": 1,
+            "fontFamily": "Lato-Regular",
+            "fontSize": 14,
+            "paddingHorizontal": 16,
+            "paddingVertical": 10,
+          }
+        }
+        textAlignVertical="auto"
+        value=""
+      />
+    </View>
+    <Text
+      style={
+        {
+          "color": "#9DA5B9",
+          "fontFamily": "Lato-Bold",
+          "fontSize": 12,
+        }
+      }
+      testID=""
+    >
+      LOGIN:TRANSLATION.PASSWORDINPUT.LABEL
+    </Text>
+    <View
+      style={
+        {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#9DA5B9",
+          "borderRadius": 16,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "marginBottom": 18,
+          "marginTop": 6,
+          "width": "100%",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="none"
+        autoCorrect={false}
+        control={
+          {
+            "_defaultValues": {
+              "email": "",
+              "password": "",
+            },
+            "_disableForm": [Function],
+            "_executeSchema": [Function],
+            "_fields": {
+              "email": {
+                "_f": {
+                  "mount": true,
+                  "name": "email",
+                  "ref": {
+                    "name": "email",
+                  },
+                  "value": "",
+                },
+              },
+              "password": {
+                "_f": {
+                  "mount": true,
+                  "name": "password",
+                  "ref": {
+                    "name": "password",
+                  },
+                  "value": "",
+                },
+              },
+            },
+            "_formState": {
+              "dirtyFields": {},
+              "disabled": false,
+              "errors": {},
+              "isDirty": false,
+              "isLoading": false,
+              "isSubmitSuccessful": false,
+              "isSubmitted": false,
+              "isSubmitting": false,
+              "isValid": false,
+              "isValidating": false,
+              "submitCount": 0,
+              "touchedFields": {},
+              "validatingFields": {},
+            },
+            "_formValues": {
+              "email": "",
+              "password": "",
+            },
+            "_getDirty": [Function],
+            "_getFieldArray": [Function],
+            "_getWatch": [Function],
+            "_names": {
+              "array": Set {},
+              "mount": Set {
+                "email",
+                "password",
+              },
+              "unMount": Set {},
+              "watch": Set {
+                "email",
+                "password",
+              },
+            },
+            "_options": {
+              "defaultValues": {
+                "email": "",
+                "password": "",
+              },
+              "delayError": 100,
+              "mode": "onBlur",
+              "reValidateMode": "onChange",
+              "resolver": [Function],
+              "shouldFocusError": true,
+            },
+            "_proxyFormState": {
+              "dirtyFields": false,
+              "disabled": true,
+              "errors": true,
+              "isDirty": false,
+              "isValid": false,
+              "isValidating": false,
+              "touchedFields": false,
+              "validatingFields": false,
+            },
+            "_removeUnmounted": [Function],
+            "_reset": [Function],
+            "_resetDefaultValues": [Function],
+            "_setErrors": [Function],
+            "_state": {
+              "action": false,
+              "mount": true,
+              "watch": false,
+            },
+            "_subjects": {
+              "array": {
+                "next": [Function],
+                "observers": [],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+              "state": {
+                "next": [Function],
+                "observers": [
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                ],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+              "values": {
+                "next": [Function],
+                "observers": [
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                ],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+            },
+            "_updateDisabledField": [Function],
+            "_updateFieldArray": [Function],
+            "_updateFormState": [Function],
+            "_updateValid": [Function],
+            "getFieldState": [Function],
+            "handleSubmit": [Function],
+            "register": [Function],
+            "setError": [Function],
+            "unregister": [Function],
+          }
+        }
+        multiline={false}
+        name="password"
+        numberOfLines={1}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholder="login:translation.passwordInput.placeholder"
+        placeholderTextColor="#9DA5B9"
+        secureTextEntry={true}
+        style={
+          {
+            "color": "#000000",
+            "flex": 1,
+            "fontFamily": "Lato-Regular",
+            "fontSize": 14,
+            "paddingHorizontal": 16,
+            "paddingVertical": 10,
+          }
+        }
+        textAlignVertical="auto"
+        value=""
+      />
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "marginBottom": 30,
+        "opacity": 1,
+        "paddingHorizontal": 40,
+      }
+    }
+    testID=""
+  >
+    <Text>
+      <Text
+        style={
+          {
+            "color": "#2162E3",
+            "fontFamily": "Lato-Bold",
+            "fontSize": 14,
+          }
+        }
+        testID=""
+      >
+        login:translation.forgotPasswordButton
+      </Text>
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#2162E3",
+        "borderRadius": 25,
+        "height": 50,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": "45%",
+      }
+    }
+    testID="loginButton"
+  >
+    <Text
+      style={
+        {
+          "color": "#FFFFFF",
+          "fontFamily": "Lato-Regular",
+          "fontSize": 14,
+        }
+      }
+      testID=""
+    >
+      login:translation.loginButton.label
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "marginTop": 32,
+        "opacity": 1,
+      }
+    }
+    testID=""
+  >
+    <Text>
+      <Text
+        style={
+          {
+            "color": "#9DA5B9",
+            "fontFamily": "Lato-Regular",
+            "fontSize": 14,
+          }
+        }
+        testID=""
+      >
+        login:translation.signUp.prefix 
+      </Text>
+      <Text
+        style={
+          {
+            "color": "#2162E3",
+            "fontFamily": "Lato-Bold",
+            "fontSize": 14,
+          }
+        }
+        testID=""
+      >
+        login:translation.signUp.label
+      </Text>
+    </Text>
+  </View>
+</View>
+`;

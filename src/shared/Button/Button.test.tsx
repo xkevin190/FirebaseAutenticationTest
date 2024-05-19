@@ -1,6 +1,6 @@
 // Button.test.tsx
 import React from 'react';
-import {render, fireEvent, act} from '@testing-library/react-native';
+import {render, fireEvent, act, waitFor} from '@testing-library/react-native';
 import Button from './Button';
 import {COLORS} from '../../constants/styles';
 
@@ -23,7 +23,10 @@ describe('Button Component', () => {
     const {getByText} = render(
       <Button buttonText="Disabled" onPress={onPressMock} disabled={true} />,
     );
-    fireEvent.press(getByText('Disabled'));
+    
+    waitFor (() => {
+      fireEvent.press(getByText('Disabled'));
+    });
     expect(onPressMock).not.toHaveBeenCalled();
   });
 
@@ -52,21 +55,23 @@ describe('Button Component', () => {
     });
   });
 
-  it('calls onPress when button is enabled', () => {
+  it('calls onPress when button is enabled', async () => {
     const {getByText} = render(
       <Button buttonText="Press Me" onPress={onPressMock} />,
     );
-    act(() => {
+
+    
+    await waitFor (() => {
       fireEvent.press(getByText('Press Me'));
     });
     expect(onPressMock).toHaveBeenCalledTimes(1);
   });
 
-  it('does not call onPress when button is disabled', () => {
+  it('does not call onPress when button is disabled', async () => {
     const {getByText} = render(
       <Button buttonText="Press Me" onPress={onPressMock} disabled={true} />,
     );
-    act(() => {
+    await waitFor (() => {
       fireEvent.press(getByText('Press Me'));
     });
     expect(onPressMock).not.toHaveBeenCalled();

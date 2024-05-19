@@ -106,7 +106,7 @@ const Login: React.FC = () => {
           rounded
           disabled={loading}
           onPress={handleSubmit(signIn)}
-          testID={''}
+          testID={'loginButton'}
         />
         <HyperText
           onPress={() => navigation.navigate(SIGN_UP)}
