@@ -1,4 +1,4 @@
-import React, {useState, useCallback, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   View,
   TouchableOpacity,
@@ -56,7 +56,7 @@ const SignUp: React.FC = () => {
   
 
   const createAccount = (data: CreateAccountRequest) => {
-    
+    dispatch(authActions.resetError());
     clearErrors();
     dispatch(
       createAccountThunk({

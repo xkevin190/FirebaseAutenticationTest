@@ -60,7 +60,7 @@ const Login: React.FC = () => {
 
       setError('password', {
         type: '',
-        message: t(`signUp:translation.signUpError.${error}`),
+        message: t(`login:translation.loginError.${error}`),
       });
     }
   }, [error]);
