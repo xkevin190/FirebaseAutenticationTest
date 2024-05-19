@@ -39,10 +39,15 @@
           "label": "Login"
         }
       },
-      "signUpErrorPrompt": {
-        "title": "User already exists!",
-        "description":"Email already is register. Please try again with another email.",
-        "buttonText": "Understood!"
+      "signUpError": {
+        "auth/email-already-in-use": "The email address is already in use by another account.",
+        "auth/invalid-email": "The email address is badly formatted.",
+        "auth/operation-not-allowed": "The email/password accounts are not enabled.",
+        "auth/weak-password": "The password is too weak.",
+        "auth/too-many-requests": "Too many requests. Try again later.",
+        "auth/network-request-failed": "Network error. Try again later.",
+        "auth/internal-error": "Internal error. Try again later.",
+        "unknown_error": "An unknown error occurred. Try again later."
       }
     }
   }

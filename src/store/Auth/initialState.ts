@@ -5,7 +5,9 @@ export interface AuthState {
   userInfo?: User | null;
   loading: boolean;
   accountCreated: boolean;
-  error: string | null;
+  resetPasswordSent: boolean;
+  errorLogin: string | null;
+  errorSignUp: string | null;
 }
 
 const initialState: AuthState = {
@@ -13,7 +15,9 @@ const initialState: AuthState = {
   userInfo: null,
   loading: false,
   accountCreated: false,
-  error: null,
+  resetPasswordSent: false,
+  errorLogin: null,
+  errorSignUp: null,
 };
 
 export default initialState;

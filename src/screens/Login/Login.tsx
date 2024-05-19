@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import {
   View,
   KeyboardAvoidingView,
@@ -16,9 +16,9 @@ import {COLORS} from '../../constants/styles';
 import Controller from '../../shared/Controller';
 import {useLoginForm} from './hooks/useLoginForm';
 import {SignInRequest} from '../../types/FirebaseService';
-import {signInThunk} from '../../store/Auth/slice';
+import {authActions, signInThunk} from '../../store/Auth/slice';
 import useAppDispatch from '../../hooks/useAppDispatch';
-import {authLoading, getUserInfo} from '../../store/Auth/selectors';
+import {authLoading, errorLogin} from '../../store/Auth/selectors';
 import useAppSelector from '../../hooks/useAppSelector';
 
 const ControlledInputs = Controller(CustomInput);
@@ -27,18 +27,43 @@ const Login: React.FC = () => {
   const [isPasswordHidden] = useState(true);
   const navigation = useNavigation<useNavigationRootStack>();
   const dispatch = useAppDispatch();
+  const error = useAppSelector(errorLogin);
 
   const loading = useAppSelector(authLoading);
   const {t} = useTranslation();
 
-  const {control, watch, handleSubmit} = useLoginForm({
+  const {control, watch, handleSubmit, setError, clearErrors} = useLoginForm({
     email: '',
     password: '',
   });
 
   const signIn = (data: SignInRequest) => {
+    dispatch(authActions.resetError());
     dispatch(signInThunk(data));
   };
+
+  useFocusEffect(
+    React.useCallback(() => {
+      clearErrors();
+      return () => {
+        dispatch(authActions.resetError());
+      };
+    }, []),
+  );
+
+  useEffect(() => {
+    if (error) {
+      setError('email', {
+        type: 'manual',
+        message: '',
+      });
+
+      setError('password', {
+        type: '',
+        message: t(`signUp:translation.signUpError.${error}`),
+      });
+    }
+  }, [error]);
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>

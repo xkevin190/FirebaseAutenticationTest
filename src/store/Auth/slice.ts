@@ -4,6 +4,7 @@ import {AccounthActionsTypes} from './constants';
 import {
   closeSession,
   createAccount,
+  resetPassword,
   signIn,
 } from '../../services/FirebaseAuthService';
 import {
@@ -12,6 +13,7 @@ import {
   User,
 } from '../../types/FirebaseService';
 import {resetStore} from '../store';
+import {act} from 'react';
 
 export const createAccountThunk = createAsyncThunk<
   {error: unknown},
@@ -32,11 +34,8 @@ export const signInThunk = createAsyncThunk<
 >(AccounthActionsTypes.LOGIN, async ({email, password}) => {
   const result = await signIn(email, password);
 
-  if (!result.user) {
-    return Promise.reject({
-      user: null,
-      error: result.error,
-    });
+  if (result.error) {
+    return Promise.reject(result.error);
   }
 
   return {
@@ -58,12 +57,32 @@ export const closeSessionThunk = createAsyncThunk(
   },
 );
 
+export const resetPasswordThunk = createAsyncThunk<
+  {passwordResetSent: boolean; error: unknown},
+  string
+>(AccounthActionsTypes.RESET_PASSWORD, async email => {
+  const result = await resetPassword(email);
+
+  if (result.error) {
+    return Promise.reject(result);
+  }
+
+  return result;
+});
+
 const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
     recoverSession: (state, action) => {
       state.userInfo = action.payload;
+    },
+    resetError: state => {
+      state.errorSignUp = null;
+      state.errorLogin = null;
+    },
+    resetPasswordSent: state => {
+      state.resetPasswordSent = false;
     },
     resetSucess: state => {
       state.accountCreated = false;
@@ -76,15 +95,17 @@ const authSlice = createSlice({
     builder.addCase(createAccountThunk.pending, state => {
       state.loading = true;
     });
-    builder.addCase(createAccountThunk.fulfilled, (state, action) => {
+    builder.addCase(createAccountThunk.fulfilled, state => {
       state.loading = false;
       state.userLogged = true;
       state.accountCreated = true;
     });
     builder.addCase(createAccountThunk.rejected, (state, payload) => {
       state.loading = false;
-      state.error = payload.error.code ?? 'unknown error';
+      state.errorSignUp = payload.error.code ?? 'unknown_error';
     });
+
+    // Sign In
 
     builder.addCase(signInThunk.pending, state => {
       state.loading = true;
@@ -96,7 +117,34 @@ const authSlice = createSlice({
     });
     builder.addCase(signInThunk.rejected, (state, payload) => {
       state.loading = false;
-      state.error = payload.error.code ?? 'unknown error';
+      state.errorLogin = payload.error.code ?? 'unknown_error';
+    });
+
+    // Close session
+
+    builder.addCase(closeSessionThunk.pending, state => {
+      state.loading = true;
+    });
+    builder.addCase(closeSessionThunk.fulfilled, state => {
+      state.loading = false;
+      state.resetPasswordSent = true;
+      state.userInfo = null;
+    });
+    builder.addCase(closeSessionThunk.rejected, (state, payload) => {
+      state.loading = false;
+    });
+
+    // Reset password
+
+    builder.addCase(resetPasswordThunk.pending, state => {
+      state.loading = true;
+    });
+    builder.addCase(resetPasswordThunk.fulfilled, (state, action) => {
+      state.loading = false;
+      state.resetPasswordSent = action.payload.passwordResetSent;
+    });
+    builder.addCase(resetPasswordThunk.rejected, (state, payload) => {
+      state.loading = false;
     });
   },
 });

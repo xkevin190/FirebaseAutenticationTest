@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {View} from 'react-native';
 import {Button} from '../../shared';
 import {COLORS} from '../../constants/styles';
 import {useTranslation} from 'react-i18next';
@@ -7,9 +7,7 @@ import styles from './styles';
 import {closeSessionThunk} from '../../store/Auth/slice';
 import useAppDispatch from '../../hooks/useAppDispatch';
 
-interface HomeProps {}
-
-const Home = (props: HomeProps) => {
+const Home = () => {
   const dispatch = useAppDispatch();
   const {t} = useTranslation();
 
@@ -20,7 +18,7 @@ const Home = (props: HomeProps) => {
   return (
     <View style={styles.container}>
       <Button
-        buttonText={t(`login:translation.loginButton.label`)}
+        buttonText={t(`login:translation.closeSessionButton`)}
         textColor={COLORS.WHITE}
         rounded
         disabled={false}

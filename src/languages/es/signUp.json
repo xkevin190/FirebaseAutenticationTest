@@ -39,10 +39,14 @@
           "label": "Ingresar"
         }
       },
-      "signUpErrorPrompt": {
-        "title": "El usuario ya existe!",
-        "description":"El email ya se encuentra registrado. Por favor intenta nuevamente con otro email.",
-        "buttonText": "Entendido!"
+      "signUpError": {
+          "auth/email-already-in-use": "La dirección de correo electrónico ya está en uso en otra cuenta.",
+          "auth/invalid-email": "La dirección de correo electrónico está mal formateada.",
+          "auth/operation-not-allowed": "Las cuentas de correo electrónico no están habilitadas.",
+          "auth/too-many-requests": "Demasiadas solicitudes. Vuelve a intentarlo más tarde.",
+          "auth/network-request-failed": "Error de red. Vuelve a intentarlo más tarde.",
+          "auth/internal-error": "Error interno. Vuelve a intentarlo más tarde.",
+          "unknown_error": "Un error desconocido ocurrió."
       }
     }
   }

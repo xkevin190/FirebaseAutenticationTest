@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import {
   View,
   TouchableWithoutFeedback,
@@ -12,20 +12,35 @@ import ForgotPasswordCompleted from './components/ForgotPasswordCompleted';
 import styles from './ForgotPassword.style';
 import Controller from '../../shared/Controller';
 import {useForgotPasswordForm} from './hooks/useForgotPasswordForm';
+import useAppDispatch from '../../hooks/useAppDispatch';
+import {authActions, resetPasswordThunk} from '../../store/Auth/slice';
+import {authLoading, resetPasswordSent} from '../../store/Auth/selectors';
+import useAppSelector from '../../hooks/useAppSelector';
+import {useFocusEffect} from '@react-navigation/native';
 
 const ControlledInputs = Controller(CustomInput);
 
 const ForgotPassword: React.FC = () => {
-  const loading = false; //useAppSelector(getRecoverPasswordLoading);
-  const sucessfull = false; //
-  const [email, setEmail] = useState('');
+  const loading = useAppSelector(authLoading);
+  const sucessfull = useAppSelector(resetPasswordSent);
+  const dispatch = useAppDispatch();
   const {t} = useTranslation();
+
+  useFocusEffect(
+    React.useCallback(() => {
+      return () => {
+        dispatch(authActions.resetPasswordSent());
+      };
+    }, []),
+  );
 
   const {control, watch, handleSubmit} = useForgotPasswordForm({
     email: '',
   });
 
-  const onSubmit = (data: {email: string}) => {};
+  const onSubmit = (data: {email: string}) => {
+    dispatch(resetPasswordThunk(data.email));
+  };
 
   return sucessfull ? (
     <ForgotPasswordCompleted />

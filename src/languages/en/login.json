@@ -35,10 +35,12 @@
       "description":"Please contact support team for help.",
       "buttonText": "Understood!"
     },
-    "loginErrorPrompt": {
-      "title": "Wrong credentials",
-      "description":"Email or password are invalid. Please try again.",
-      "buttonText": "Understood!"
-    }
+    "loginError": {
+      "auth/invalid-email": "Invalid email.",
+      "auth/user-disabled": "User account has been disabled.",
+      "auth/wrong-password": "Incorrect password.",
+      "auth/invalid-credential": "Invalid credential.",
+    },
+    "closeSessionButton": "Close session"
   }
 }

@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from 'react';
+import React, {useState, useCallback, useEffect} from 'react';
 import {
   View,
   TouchableOpacity,
@@ -20,9 +20,13 @@ import useAppDispatch from '../../hooks/useAppDispatch';
 import {useSingUpForm} from './hooks/useSignUpForm';
 import Controller from '../../shared/Controller';
 import {createAccountThunk, authActions} from '../../store/Auth/slice';
-import {CreateAccountRequest, User} from '../../types/FirebaseService';
+import {CreateAccountRequest} from '../../types/FirebaseService';
 import useAppSelector from '../../hooks/useAppSelector';
-import {accountCreated, authLoading} from '../../store/Auth/selectors';
+import {
+  accountCreated,
+  authLoading,
+  errorSignUp,
+} from '../../store/Auth/selectors';
 
 const ControlledInputs = Controller(CustomInput);
 
@@ -33,8 +37,9 @@ const SignUp: React.FC = () => {
   const dispatch = useAppDispatch();
   const successful = useAppSelector(accountCreated);
   const loading = useAppSelector(authLoading);
+  const error = useAppSelector(errorSignUp);
 
-  const {control, watch, handleSubmit} = useSingUpForm({
+  const {control, watch, handleSubmit, setError} = useSingUpForm({
     email: '',
     lastName: '',
     firstName: '',
@@ -59,6 +64,15 @@ const SignUp: React.FC = () => {
       };
     }, []),
   );
+
+  useEffect(() => {
+    if (error) {
+      setError('email', {
+        type: 'manual',
+        message: t(`signUp:translation.signUpError.${error}`),
+      });
+    }
+  }, [error]);
 
   return !successful ? (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>

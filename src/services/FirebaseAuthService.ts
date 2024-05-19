@@ -21,7 +21,6 @@ export const createAccount = async (user: CreateAccountRequest) => {
 export const signIn = async (email: string, password: string) => {
   try {
     const result = await auth().signInWithEmailAndPassword(email, password);
-
     return {
       user: result.user as unknown as User,
       error: null,
@@ -45,7 +44,6 @@ export const closeSession = async () => {
 export const resetPassword = async (email: string) => {
   try {
     await auth().sendPasswordResetEmail(email);
-
     return {
       passwordResetSent: true,
       error: null,
