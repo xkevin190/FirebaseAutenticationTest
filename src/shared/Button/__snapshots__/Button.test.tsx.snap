@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component renders correctly with default props 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#2162E3",
+      "borderRadius": 0,
+      "height": 50,
+      "justifyContent": "center",
+      "opacity": 1,
+      "width": "45%",
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#000000",
+        "fontFamily": "Lato-Regular",
+        "fontSize": 14,
+      }
+    }
+    testID=""
+  >
+    Default Button
+  </Text>
+</View>
+`;

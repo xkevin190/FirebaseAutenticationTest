@@ -88,6 +88,7 @@ const CustomInput: React.FC<FormInputProps> = ({
       {helperText && (
         <View style={styles.errorContainer}>
           <CustomText
+            testID="helperText"
             text={helperText}
             color={COLORS.ALERT_DEFAULT}
             bodyType="small-paragraph"

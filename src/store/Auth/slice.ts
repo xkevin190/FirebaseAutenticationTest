@@ -13,7 +13,6 @@ import {
   User,
 } from '../../types/FirebaseService';
 import {resetStore} from '../store';
-import {act} from 'react';
 
 export const createAccountThunk = createAsyncThunk<
   {error: unknown},
@@ -97,7 +96,6 @@ const authSlice = createSlice({
     });
     builder.addCase(createAccountThunk.fulfilled, state => {
       state.loading = false;
-      state.userLogged = true;
       state.accountCreated = true;
     });
     builder.addCase(createAccountThunk.rejected, (state, payload) => {

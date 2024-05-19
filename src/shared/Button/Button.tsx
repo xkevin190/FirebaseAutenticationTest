@@ -1,10 +1,10 @@
 import React from 'react';
 import {TouchableOpacity} from 'react-native';
 
-import {ButtonSize} from '../../types/styles';
 import CustomText from '../CustomText';
 import styles from './Button.styles';
 import {COLORS} from '../../constants/styles';
+export type ButtonSize = 'md' | 'xxl';
 
 export interface IButtonProps {
   buttonText: string;

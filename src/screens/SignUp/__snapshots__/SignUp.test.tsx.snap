@@ -1,0 +1,1159 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp component renders all input fields 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessible={true}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#F6F8FF",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    style={
+      [
+        {
+          "marginBottom": 8,
+          "paddingHorizontal": 24,
+          "width": "100%",
+        },
+        {
+          "paddingBottom": 0,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#9DA5B9",
+          "fontFamily": "Lato-Bold",
+          "fontSize": 12,
+        }
+      }
+      testID=""
+    >
+      SIGNUP:TRANSLATION.NAMEINPUT.LABEL
+    </Text>
+    <View
+      style={
+        {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#9DA5B9",
+          "borderRadius": 16,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "marginBottom": 18,
+          "marginTop": 6,
+          "width": "100%",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="none"
+        autoCorrect={false}
+        control={
+          {
+            "_defaultValues": {
+              "email": "",
+              "firstName": "",
+              "lastName": "",
+              "password": "",
+            },
+            "_disableForm": [Function],
+            "_executeSchema": [Function],
+            "_fields": {
+              "email": {
+                "_f": {
+                  "mount": true,
+                  "name": "email",
+                  "ref": {
+                    "name": "email",
+                  },
+                  "value": "",
+                },
+              },
+              "firstName": {
+                "_f": {
+                  "mount": true,
+                  "name": "firstName",
+                  "ref": {
+                    "name": "firstName",
+                  },
+                  "value": "",
+                },
+              },
+              "lastName": {
+                "_f": {
+                  "mount": true,
+                  "name": "lastName",
+                  "ref": {
+                    "name": "lastName",
+                  },
+                  "value": "",
+                },
+              },
+              "password": {
+                "_f": {
+                  "mount": true,
+                  "name": "password",
+                  "ref": {
+                    "name": "password",
+                  },
+                  "value": "",
+                },
+              },
+            },
+            "_formState": {
+              "dirtyFields": {},
+              "disabled": false,
+              "errors": {},
+              "isDirty": false,
+              "isLoading": false,
+              "isSubmitSuccessful": false,
+              "isSubmitted": false,
+              "isSubmitting": false,
+              "isValid": false,
+              "isValidating": false,
+              "submitCount": 0,
+              "touchedFields": {},
+              "validatingFields": {},
+            },
+            "_formValues": {
+              "email": "",
+              "firstName": "",
+              "lastName": "",
+              "password": "",
+            },
+            "_getDirty": [Function],
+            "_getFieldArray": [Function],
+            "_getWatch": [Function],
+            "_names": {
+              "array": Set {},
+              "mount": Set {
+                "firstName",
+                "lastName",
+                "email",
+                "password",
+              },
+              "unMount": Set {},
+              "watch": Set {
+                "firstName",
+                "lastName",
+                "email",
+                "password",
+              },
+            },
+            "_options": {
+              "defaultValues": {
+                "email": "",
+                "firstName": "",
+                "lastName": "",
+                "password": "",
+              },
+              "delayError": 100,
+              "mode": "onBlur",
+              "reValidateMode": "onChange",
+              "resolver": [Function],
+              "shouldFocusError": true,
+            },
+            "_proxyFormState": {
+              "dirtyFields": false,
+              "disabled": true,
+              "errors": "all",
+              "isDirty": false,
+              "isValid": false,
+              "isValidating": false,
+              "touchedFields": false,
+              "validatingFields": false,
+            },
+            "_removeUnmounted": [Function],
+            "_reset": [Function],
+            "_resetDefaultValues": [Function],
+            "_setErrors": [Function],
+            "_state": {
+              "action": false,
+              "mount": true,
+              "watch": false,
+            },
+            "_subjects": {
+              "array": {
+                "next": [Function],
+                "observers": [],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+              "state": {
+                "next": [Function],
+                "observers": [
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                ],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+              "values": {
+                "next": [Function],
+                "observers": [
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                ],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+            },
+            "_updateDisabledField": [Function],
+            "_updateFieldArray": [Function],
+            "_updateFormState": [Function],
+            "_updateValid": [Function],
+            "getFieldState": [Function],
+            "handleSubmit": [Function],
+            "register": [Function],
+            "setError": [Function],
+            "unregister": [Function],
+          }
+        }
+        multiline={false}
+        name="firstName"
+        numberOfLines={1}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholder="signUp:translation.nameInput.placeholder"
+        placeholderTextColor="#9DA5B9"
+        secureTextEntry={false}
+        style={
+          {
+            "color": "#000000",
+            "flex": 1,
+            "fontFamily": "Lato-Regular",
+            "fontSize": 14,
+            "paddingHorizontal": 16,
+            "paddingVertical": 10,
+          }
+        }
+        textAlignVertical="auto"
+        value=""
+      />
+    </View>
+    <Text
+      style={
+        {
+          "color": "#9DA5B9",
+          "fontFamily": "Lato-Bold",
+          "fontSize": 12,
+        }
+      }
+      testID=""
+    >
+      SIGNUP:TRANSLATION.LASTNAMEINPUT.LABEL
+    </Text>
+    <View
+      style={
+        {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#9DA5B9",
+          "borderRadius": 16,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "marginBottom": 18,
+          "marginTop": 6,
+          "width": "100%",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="none"
+        autoCorrect={false}
+        control={
+          {
+            "_defaultValues": {
+              "email": "",
+              "firstName": "",
+              "lastName": "",
+              "password": "",
+            },
+            "_disableForm": [Function],
+            "_executeSchema": [Function],
+            "_fields": {
+              "email": {
+                "_f": {
+                  "mount": true,
+                  "name": "email",
+                  "ref": {
+                    "name": "email",
+                  },
+                  "value": "",
+                },
+              },
+              "firstName": {
+                "_f": {
+                  "mount": true,
+                  "name": "firstName",
+                  "ref": {
+                    "name": "firstName",
+                  },
+                  "value": "",
+                },
+              },
+              "lastName": {
+                "_f": {
+                  "mount": true,
+                  "name": "lastName",
+                  "ref": {
+                    "name": "lastName",
+                  },
+                  "value": "",
+                },
+              },
+              "password": {
+                "_f": {
+                  "mount": true,
+                  "name": "password",
+                  "ref": {
+                    "name": "password",
+                  },
+                  "value": "",
+                },
+              },
+            },
+            "_formState": {
+              "dirtyFields": {},
+              "disabled": false,
+              "errors": {},
+              "isDirty": false,
+              "isLoading": false,
+              "isSubmitSuccessful": false,
+              "isSubmitted": false,
+              "isSubmitting": false,
+              "isValid": false,
+              "isValidating": false,
+              "submitCount": 0,
+              "touchedFields": {},
+              "validatingFields": {},
+            },
+            "_formValues": {
+              "email": "",
+              "firstName": "",
+              "lastName": "",
+              "password": "",
+            },
+            "_getDirty": [Function],
+            "_getFieldArray": [Function],
+            "_getWatch": [Function],
+            "_names": {
+              "array": Set {},
+              "mount": Set {
+                "firstName",
+                "lastName",
+                "email",
+                "password",
+              },
+              "unMount": Set {},
+              "watch": Set {
+                "firstName",
+                "lastName",
+                "email",
+                "password",
+              },
+            },
+            "_options": {
+              "defaultValues": {
+                "email": "",
+                "firstName": "",
+                "lastName": "",
+                "password": "",
+              },
+              "delayError": 100,
+              "mode": "onBlur",
+              "reValidateMode": "onChange",
+              "resolver": [Function],
+              "shouldFocusError": true,
+            },
+            "_proxyFormState": {
+              "dirtyFields": false,
+              "disabled": true,
+              "errors": "all",
+              "isDirty": false,
+              "isValid": false,
+              "isValidating": false,
+              "touchedFields": false,
+              "validatingFields": false,
+            },
+            "_removeUnmounted": [Function],
+            "_reset": [Function],
+            "_resetDefaultValues": [Function],
+            "_setErrors": [Function],
+            "_state": {
+              "action": false,
+              "mount": true,
+              "watch": false,
+            },
+            "_subjects": {
+              "array": {
+                "next": [Function],
+                "observers": [],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+              "state": {
+                "next": [Function],
+                "observers": [
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                ],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+              "values": {
+                "next": [Function],
+                "observers": [
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                ],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+            },
+            "_updateDisabledField": [Function],
+            "_updateFieldArray": [Function],
+            "_updateFormState": [Function],
+            "_updateValid": [Function],
+            "getFieldState": [Function],
+            "handleSubmit": [Function],
+            "register": [Function],
+            "setError": [Function],
+            "unregister": [Function],
+          }
+        }
+        multiline={false}
+        name="lastName"
+        numberOfLines={1}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholder="signUp:translation.lastNameInput.placeholder"
+        placeholderTextColor="#9DA5B9"
+        secureTextEntry={false}
+        style={
+          {
+            "color": "#000000",
+            "flex": 1,
+            "fontFamily": "Lato-Regular",
+            "fontSize": 14,
+            "paddingHorizontal": 16,
+            "paddingVertical": 10,
+          }
+        }
+        textAlignVertical="auto"
+        value=""
+      />
+    </View>
+    <Text
+      style={
+        {
+          "color": "#9DA5B9",
+          "fontFamily": "Lato-Bold",
+          "fontSize": 12,
+        }
+      }
+      testID=""
+    >
+      SIGNUP:TRANSLATION.EMAILINPUT.LABEL
+    </Text>
+    <View
+      style={
+        {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#9DA5B9",
+          "borderRadius": 16,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "marginBottom": 18,
+          "marginTop": 6,
+          "width": "100%",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="none"
+        autoCorrect={false}
+        control={
+          {
+            "_defaultValues": {
+              "email": "",
+              "firstName": "",
+              "lastName": "",
+              "password": "",
+            },
+            "_disableForm": [Function],
+            "_executeSchema": [Function],
+            "_fields": {
+              "email": {
+                "_f": {
+                  "mount": true,
+                  "name": "email",
+                  "ref": {
+                    "name": "email",
+                  },
+                  "value": "",
+                },
+              },
+              "firstName": {
+                "_f": {
+                  "mount": true,
+                  "name": "firstName",
+                  "ref": {
+                    "name": "firstName",
+                  },
+                  "value": "",
+                },
+              },
+              "lastName": {
+                "_f": {
+                  "mount": true,
+                  "name": "lastName",
+                  "ref": {
+                    "name": "lastName",
+                  },
+                  "value": "",
+                },
+              },
+              "password": {
+                "_f": {
+                  "mount": true,
+                  "name": "password",
+                  "ref": {
+                    "name": "password",
+                  },
+                  "value": "",
+                },
+              },
+            },
+            "_formState": {
+              "dirtyFields": {},
+              "disabled": false,
+              "errors": {},
+              "isDirty": false,
+              "isLoading": false,
+              "isSubmitSuccessful": false,
+              "isSubmitted": false,
+              "isSubmitting": false,
+              "isValid": false,
+              "isValidating": false,
+              "submitCount": 0,
+              "touchedFields": {},
+              "validatingFields": {},
+            },
+            "_formValues": {
+              "email": "",
+              "firstName": "",
+              "lastName": "",
+              "password": "",
+            },
+            "_getDirty": [Function],
+            "_getFieldArray": [Function],
+            "_getWatch": [Function],
+            "_names": {
+              "array": Set {},
+              "mount": Set {
+                "firstName",
+                "lastName",
+                "email",
+                "password",
+              },
+              "unMount": Set {},
+              "watch": Set {
+                "firstName",
+                "lastName",
+                "email",
+                "password",
+              },
+            },
+            "_options": {
+              "defaultValues": {
+                "email": "",
+                "firstName": "",
+                "lastName": "",
+                "password": "",
+              },
+              "delayError": 100,
+              "mode": "onBlur",
+              "reValidateMode": "onChange",
+              "resolver": [Function],
+              "shouldFocusError": true,
+            },
+            "_proxyFormState": {
+              "dirtyFields": false,
+              "disabled": true,
+              "errors": "all",
+              "isDirty": false,
+              "isValid": false,
+              "isValidating": false,
+              "touchedFields": false,
+              "validatingFields": false,
+            },
+            "_removeUnmounted": [Function],
+            "_reset": [Function],
+            "_resetDefaultValues": [Function],
+            "_setErrors": [Function],
+            "_state": {
+              "action": false,
+              "mount": true,
+              "watch": false,
+            },
+            "_subjects": {
+              "array": {
+                "next": [Function],
+                "observers": [],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+              "state": {
+                "next": [Function],
+                "observers": [
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                ],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+              "values": {
+                "next": [Function],
+                "observers": [
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                ],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+            },
+            "_updateDisabledField": [Function],
+            "_updateFieldArray": [Function],
+            "_updateFormState": [Function],
+            "_updateValid": [Function],
+            "getFieldState": [Function],
+            "handleSubmit": [Function],
+            "register": [Function],
+            "setError": [Function],
+            "unregister": [Function],
+          }
+        }
+        multiline={false}
+        name="email"
+        numberOfLines={1}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholder="signUp:translation.emailInput.placeholder"
+        placeholderTextColor="#9DA5B9"
+        secureTextEntry={false}
+        style={
+          {
+            "color": "#000000",
+            "flex": 1,
+            "fontFamily": "Lato-Regular",
+            "fontSize": 14,
+            "paddingHorizontal": 16,
+            "paddingVertical": 10,
+          }
+        }
+        textAlignVertical="auto"
+        value=""
+      />
+    </View>
+    <Text
+      style={
+        {
+          "color": "#9DA5B9",
+          "fontFamily": "Lato-Bold",
+          "fontSize": 12,
+        }
+      }
+      testID=""
+    >
+      SIGNUP:TRANSLATION.PASSWORDINPUT.LABEL
+    </Text>
+    <View
+      style={
+        {
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#9DA5B9",
+          "borderRadius": 16,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "marginBottom": 18,
+          "marginTop": 6,
+          "width": "100%",
+        }
+      }
+    >
+      <TextInput
+        autoCapitalize="none"
+        autoCorrect={false}
+        control={
+          {
+            "_defaultValues": {
+              "email": "",
+              "firstName": "",
+              "lastName": "",
+              "password": "",
+            },
+            "_disableForm": [Function],
+            "_executeSchema": [Function],
+            "_fields": {
+              "email": {
+                "_f": {
+                  "mount": true,
+                  "name": "email",
+                  "ref": {
+                    "name": "email",
+                  },
+                  "value": "",
+                },
+              },
+              "firstName": {
+                "_f": {
+                  "mount": true,
+                  "name": "firstName",
+                  "ref": {
+                    "name": "firstName",
+                  },
+                  "value": "",
+                },
+              },
+              "lastName": {
+                "_f": {
+                  "mount": true,
+                  "name": "lastName",
+                  "ref": {
+                    "name": "lastName",
+                  },
+                  "value": "",
+                },
+              },
+              "password": {
+                "_f": {
+                  "mount": true,
+                  "name": "password",
+                  "ref": {
+                    "name": "password",
+                  },
+                  "value": "",
+                },
+              },
+            },
+            "_formState": {
+              "dirtyFields": {},
+              "disabled": false,
+              "errors": {},
+              "isDirty": false,
+              "isLoading": false,
+              "isSubmitSuccessful": false,
+              "isSubmitted": false,
+              "isSubmitting": false,
+              "isValid": false,
+              "isValidating": false,
+              "submitCount": 0,
+              "touchedFields": {},
+              "validatingFields": {},
+            },
+            "_formValues": {
+              "email": "",
+              "firstName": "",
+              "lastName": "",
+              "password": "",
+            },
+            "_getDirty": [Function],
+            "_getFieldArray": [Function],
+            "_getWatch": [Function],
+            "_names": {
+              "array": Set {},
+              "mount": Set {
+                "firstName",
+                "lastName",
+                "email",
+                "password",
+              },
+              "unMount": Set {},
+              "watch": Set {
+                "firstName",
+                "lastName",
+                "email",
+                "password",
+              },
+            },
+            "_options": {
+              "defaultValues": {
+                "email": "",
+                "firstName": "",
+                "lastName": "",
+                "password": "",
+              },
+              "delayError": 100,
+              "mode": "onBlur",
+              "reValidateMode": "onChange",
+              "resolver": [Function],
+              "shouldFocusError": true,
+            },
+            "_proxyFormState": {
+              "dirtyFields": false,
+              "disabled": true,
+              "errors": "all",
+              "isDirty": false,
+              "isValid": false,
+              "isValidating": false,
+              "touchedFields": false,
+              "validatingFields": false,
+            },
+            "_removeUnmounted": [Function],
+            "_reset": [Function],
+            "_resetDefaultValues": [Function],
+            "_setErrors": [Function],
+            "_state": {
+              "action": false,
+              "mount": true,
+              "watch": false,
+            },
+            "_subjects": {
+              "array": {
+                "next": [Function],
+                "observers": [],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+              "state": {
+                "next": [Function],
+                "observers": [
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                ],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+              "values": {
+                "next": [Function],
+                "observers": [
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                  {
+                    "next": [Function],
+                  },
+                ],
+                "subscribe": [Function],
+                "unsubscribe": [Function],
+              },
+            },
+            "_updateDisabledField": [Function],
+            "_updateFieldArray": [Function],
+            "_updateFormState": [Function],
+            "_updateValid": [Function],
+            "getFieldState": [Function],
+            "handleSubmit": [Function],
+            "register": [Function],
+            "setError": [Function],
+            "unregister": [Function],
+          }
+        }
+        multiline={false}
+        name="password"
+        numberOfLines={1}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholder="signUp:translation.passwordInput.placeholder"
+        placeholderTextColor="#9DA5B9"
+        secureTextEntry={true}
+        style={
+          {
+            "color": "#000000",
+            "flex": 1,
+            "fontFamily": "Lato-Regular",
+            "fontSize": 14,
+            "paddingHorizontal": 16,
+            "paddingVertical": 10,
+          }
+        }
+        textAlignVertical="auto"
+        value=""
+      />
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "width": "15%",
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+            }
+          }
+        >
+          <Icon
+            color="#313342"
+            name="eye"
+            size={15}
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#2162E3",
+        "borderRadius": 25,
+        "height": 50,
+        "justifyContent": "center",
+        "opacity": 1,
+        "width": "45%",
+      }
+    }
+    testID="createAccountButton"
+  >
+    <Text
+      style={
+        {
+          "color": "#FFFFFF",
+          "fontFamily": "Lato-Regular",
+          "fontSize": 14,
+        }
+      }
+      testID=""
+    >
+      signUp:translation.createAccountButton.label
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "marginTop": 32,
+        "opacity": 1,
+      }
+    }
+    testID="signInButton"
+  >
+    <Text>
+      <Text
+        style={
+          {
+            "color": "#9DA5B9",
+            "fontFamily": "Lato-Regular",
+            "fontSize": 14,
+          }
+        }
+        testID=""
+      >
+        signUp:translation.signIn.prefix 
+      </Text>
+      <Text
+        style={
+          {
+            "color": "#2162E3",
+            "fontFamily": "Lato-Bold",
+            "fontSize": 14,
+          }
+        }
+        testID=""
+      >
+        signUp:translation.signIn.label
+      </Text>
+    </Text>
+  </View>
+</View>
+`;

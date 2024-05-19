@@ -39,14 +39,25 @@ const SignUp: React.FC = () => {
   const loading = useAppSelector(authLoading);
   const error = useAppSelector(errorSignUp);
 
-  const {control, watch, handleSubmit, setError} = useSingUpForm({
+  const {
+    control,
+    watch,
+    handleSubmit,
+    setError,
+    clearErrors,
+    formState: {errors},
+  } = useSingUpForm({
     email: '',
     lastName: '',
     firstName: '',
     password: '',
   });
 
+  
+
   const createAccount = (data: CreateAccountRequest) => {
+    
+    clearErrors();
     dispatch(
       createAccountThunk({
         email: data.email,
@@ -60,6 +71,7 @@ const SignUp: React.FC = () => {
   useFocusEffect(
     React.useCallback(() => {
       return () => {
+        dispatch(authActions.resetError());
         dispatch(authActions.resetSucess());
       };
     }, []),
@@ -73,6 +85,7 @@ const SignUp: React.FC = () => {
       });
     }
   }, [error]);
+
 
   return !successful ? (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
