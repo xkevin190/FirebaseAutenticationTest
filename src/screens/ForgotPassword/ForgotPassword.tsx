@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, {useCallback} from 'react';
 import {
   View,
   TouchableWithoutFeedback,
@@ -65,7 +65,7 @@ const ForgotPassword: React.FC = () => {
             )}
             textColor={COLORS.WHITE}
             rounded
-            testID='resetPasswordButton'
+            testID="resetPasswordButton"
             size="xxl"
             onPress={handleSubmit(onSubmit)}
             disabled={loading}

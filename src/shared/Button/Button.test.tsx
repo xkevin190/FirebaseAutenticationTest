@@ -23,8 +23,8 @@ describe('Button Component', () => {
     const {getByText} = render(
       <Button buttonText="Disabled" onPress={onPressMock} disabled={true} />,
     );
-    
-    waitFor (() => {
+
+    waitFor(() => {
       fireEvent.press(getByText('Disabled'));
     });
     expect(onPressMock).not.toHaveBeenCalled();
@@ -60,8 +60,7 @@ describe('Button Component', () => {
       <Button buttonText="Press Me" onPress={onPressMock} />,
     );
 
-    
-    await waitFor (() => {
+    await waitFor(() => {
       fireEvent.press(getByText('Press Me'));
     });
     expect(onPressMock).toHaveBeenCalledTimes(1);
@@ -71,7 +70,7 @@ describe('Button Component', () => {
     const {getByText} = render(
       <Button buttonText="Press Me" onPress={onPressMock} disabled={true} />,
     );
-    await waitFor (() => {
+    await waitFor(() => {
       fireEvent.press(getByText('Press Me'));
     });
     expect(onPressMock).not.toHaveBeenCalled();

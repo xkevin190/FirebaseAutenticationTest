@@ -11,8 +11,8 @@ import Login from './Login';
 let mockDispatch = jest.fn();
 jest.mock('react-native-vector-icons/Ionicons', () => 'Icon');
 
-jest.mock('../../hooks/useAppDispatch',  () => {
-    return ()=> mockDispatch;
+jest.mock('../../hooks/useAppDispatch', () => {
+  return () => mockDispatch;
 });
 
 jest.mock('../../hooks/useAppSelector', () => jest.fn());
@@ -42,9 +42,9 @@ jest.mock('../../store/Auth/slice', () => {
 });
 
 const navContext = {
-    isFocused: () => true,
-    addListener: jest.fn(() => jest.fn()),
-  };
+  isFocused: () => true,
+  addListener: jest.fn(() => jest.fn()),
+};
 
 let Component: RenderResult;
 
@@ -56,11 +56,10 @@ beforeEach(() => {
   );
 });
 
-
-describe('Login component',  () => {
-  test('renders all input fields',  () => {
+describe('Login component', () => {
+  test('renders all input fields', () => {
     const {getByPlaceholderText, toJSON} = Component;
-   
+
     const emailInput = getByPlaceholderText(
       'login:translation.emailInput.placeholder',
     );
@@ -84,25 +83,21 @@ describe('Login component',  () => {
     );
     const submitButton = getByTestId('loginButton');
 
-
     fireEvent.changeText(emailInput, 'test@gmail.com');
     fireEvent.changeText(passwordInput, 'K123456v?');
 
     expect(emailInput.props.value).toBe('test@gmail.com');
     expect(passwordInput.props.value).toBe('K123456v?');
 
-
     await waitFor(() => {
-        fireEvent.press(submitButton) 
+      fireEvent.press(submitButton);
     });
     expect(mockDispatch).toHaveBeenCalled();
-    
   });
 
   test('displays error message for empty email field', async () => {
-    const {getByPlaceholderText,getByTestId, queryAllByTestId} =
-      Component;
-    
+    const {getByPlaceholderText, getByTestId, queryAllByTestId} = Component;
+
     const emailInput = getByPlaceholderText(
       'login:translation.emailInput.placeholder',
     );
@@ -111,7 +106,6 @@ describe('Login component',  () => {
     );
     const submitButton = getByTestId('loginButton');
 
-
     fireEvent.changeText(emailInput, '');
     fireEvent.changeText(passwordInput, '');
     fireEvent.press(submitButton);
@@ -119,6 +113,5 @@ describe('Login component',  () => {
     await waitFor(() => {
       expect(queryAllByTestId('helperText')).toHaveLength(2);
     });
-    
   });
 });

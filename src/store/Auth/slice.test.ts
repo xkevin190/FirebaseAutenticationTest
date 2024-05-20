@@ -8,10 +8,9 @@ import authReducer, {
 } from './slice';
 import * as FirebaseAuthService from '../../services/FirebaseAuthService';
 
-
 import initialState from './initialState';
 
-jest.mock('../store')
+jest.mock('../store');
 
 jest.mock('@react-native-firebase/auth', () => ({
   __esModule: true,
@@ -22,8 +21,6 @@ jest.mock('@react-native-firebase/auth', () => ({
     sendPasswordResetEmail: jest.fn(),
   })),
 }));
-
-
 
 jest.mock('../../services/FirebaseAuthService', () => {
   return {

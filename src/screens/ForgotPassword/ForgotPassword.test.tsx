@@ -11,8 +11,8 @@ import ForgotPassword from './ForgotPassword';
 let mockDispatch = jest.fn();
 jest.mock('react-native-vector-icons/Ionicons', () => 'Icon');
 
-jest.mock('../../hooks/useAppDispatch',  () => {
-    return ()=> mockDispatch;
+jest.mock('../../hooks/useAppDispatch', () => {
+  return () => mockDispatch;
 });
 
 jest.mock('../../hooks/useAppSelector', () => jest.fn());
@@ -41,9 +41,9 @@ jest.mock('../../store/Auth/slice', () => {
 });
 
 const navContext = {
-    isFocused: () => true,
-    addListener: jest.fn(() => jest.fn()),
-  };
+  isFocused: () => true,
+  addListener: jest.fn(() => jest.fn()),
+};
 
 let Component: RenderResult;
 
@@ -55,11 +55,10 @@ beforeEach(() => {
   );
 });
 
-
-describe('ForgotPassword component',  () => {
-  test('renders all input fields',  () => {
+describe('ForgotPassword component', () => {
+  test('renders all input fields', () => {
     const {getByPlaceholderText, toJSON} = Component;
-   
+
     const emailInput = getByPlaceholderText(
       'forgotPassword:translation.emailInput.placeholder',
     );
@@ -74,26 +73,24 @@ describe('ForgotPassword component',  () => {
     const emailInput = getByPlaceholderText(
       'forgotPassword:translation.emailInput.placeholder',
     );
-  
+
     const submitButton = getByTestId('resetPasswordButton');
     fireEvent.changeText(emailInput, 'test@gmail.com');
     expect(emailInput.props.value).toBe('test@gmail.com');
 
     await waitFor(() => {
-        fireEvent.press(submitButton) 
+      fireEvent.press(submitButton);
     });
     expect(mockDispatch).toHaveBeenCalled();
-    
   });
 
   test('displays error message for empty email field', async () => {
-    const {getByPlaceholderText,getByTestId, queryAllByTestId} =
-      Component;
-    
+    const {getByPlaceholderText, getByTestId, queryAllByTestId} = Component;
+
     const emailInput = getByPlaceholderText(
       'forgotPassword:translation.emailInput.placeholder',
     );
-   
+
     const submitButton = getByTestId('resetPasswordButton');
 
     fireEvent.changeText(emailInput, '');
@@ -102,6 +99,5 @@ describe('ForgotPassword component',  () => {
     await waitFor(() => {
       expect(queryAllByTestId('helperText')).toHaveLength(1);
     });
-    
   });
 });

@@ -53,8 +53,6 @@ const SignUp: React.FC = () => {
     password: '',
   });
 
-  
-
   const createAccount = (data: CreateAccountRequest) => {
     dispatch(authActions.resetError());
     clearErrors();
@@ -85,7 +83,6 @@ const SignUp: React.FC = () => {
       });
     }
   }, [error]);
-
 
   return !successful ? (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss}>

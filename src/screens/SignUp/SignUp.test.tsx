@@ -11,8 +11,8 @@ import SignUp from './SignUp';
 let mockDispatch = jest.fn();
 jest.mock('react-native-vector-icons/Ionicons', () => 'Icon');
 
-jest.mock('../../hooks/useAppDispatch',  () => {
-    return ()=> mockDispatch;
+jest.mock('../../hooks/useAppDispatch', () => {
+  return () => mockDispatch;
 });
 
 jest.mock('../../hooks/useAppSelector', () => jest.fn());
@@ -56,8 +56,8 @@ const navContext = {
   addListener: jest.fn(() => jest.fn()),
 };
 
-describe('SignUp component',  () => {
-  test('renders all input fields',  () => {
+describe('SignUp component', () => {
+  test('renders all input fields', () => {
     const {getByPlaceholderText, toJSON} = Component;
     const firstNameInput = getByPlaceholderText(
       'signUp:translation.nameInput.placeholder',
@@ -95,24 +95,20 @@ describe('SignUp component',  () => {
     );
     const submitButton = getByTestId('createAccountButton');
 
-
     fireEvent.changeText(firstNameInput, 'John');
     fireEvent.changeText(lastNameInput, 'Doe');
     fireEvent.changeText(emailInput, 'test@gmail.com');
     fireEvent.changeText(passwordInput, 'K123456v?');
-
 
     expect(firstNameInput.props.value).toBe('John');
     expect(lastNameInput.props.value).toBe('Doe');
     expect(emailInput.props.value).toBe('test@gmail.com');
     expect(passwordInput.props.value).toBe('K123456v?');
 
-
     await waitFor(() => {
-        fireEvent.press(submitButton) 
+      fireEvent.press(submitButton);
     });
     expect(mockDispatch).toHaveBeenCalled();
-    
   });
 
   test('displays error message for empty email field', async () => {
@@ -141,6 +137,5 @@ describe('SignUp component',  () => {
     await waitFor(() => {
       expect(queryAllByTestId('helperText')).toHaveLength(4);
     });
-    
   });
 });
